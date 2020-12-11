@@ -1,0 +1,37 @@
+package com.oops;
+
+public class StaticKeyword {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Game obj1=new Game();
+		Game obj2=new Game();
+		obj1.show(123, "warner");
+		obj2.show(212, "virat");
+		obj1.display();
+		obj2.display();
+
+	}
+
+}
+class Game
+{
+	int score;
+	String name;
+	static String game="cricket";
+	
+	public void show(int i,String str)
+	{
+		score=i;
+		name=str;
+	}
+	static void change()
+	{
+		game="footbal";
+	}
+	public void display()
+	{
+		System.out.println(score+""+name+""+game);
+	}
+}
